@@ -27,18 +27,18 @@ from datetime import datetime
 
 # ── Configuration ──────────────────────────────────────────────
 SEASON = 2026
-TOP_N_PLAYERS = 40  # How many players to include
+TOP_N_PLAYERS = 60  # How many players to include
 REQUEST_DELAY = 0.3  # Seconds between API calls (be polite)
 
 # Known top PGA player ESPN IDs (manually curated — ESPN doesn't rank by OWGR)
 # Format: (espn_id, name) — used as seed list, supplemented by current event fields
 TOP_PLAYER_IDS = [
+    # ── Top PGA Tour players ──
     (9478,    "Scottie Scheffler"),
     (10140,   "Xander Schauffele"),
     (3470,    "Rory McIlroy"),
     (10592,   "Collin Morikawa"),
     (4375972, "Ludvig Aberg"),
-    (9780,    "Jon Rahm"),
     (11119,   "Wyndham Clark"),
     (4364873, "Viktor Hovland"),
     (6007,    "Patrick Cantlay"),
@@ -73,6 +73,35 @@ TOP_PLAYER_IDS = [
     (9530,    "Maverick McNealy"),
     (9877,    "Will Zalatoris"),
     (4425898, "Austin Eckroat"),
+    # ── Added OWGR Top 50 PGA players ──
+    (569,     "Justin Rose"),
+    (4690755, "Chris Gotterup"),
+    (10166,   "J.J. Spaun"),
+    (4404992, "Ben Griffin"),
+    (5054388, "Jacob Bridgeman"),
+    (3832,    "Alex Noren"),
+    (5408,    "Harris English"),
+    (5076021, "Ryan Gerard"),
+    (7081,    "Si Woo Kim"),
+    (10364,   "Kurt Kitayama"),
+    (11250,   "Nicolai Hojgaard"),
+    (4408316, "Nico Echavarria"),
+    (9843,    "Jake Knapp"),
+]
+
+# ── LIV Golf players who play Majors ──
+# These players won't have PGA Tour season stats, so we handle them separately.
+# They are eligible for: Masters, U.S. Open, The Open, PGA Championship
+# (based on past wins, OWGR ranking, or other exemptions)
+LIV_PLAYERS = [
+    (9780,    "Jon Rahm",           "ESP", "Masters, U.S. Open, Open, PGA Champ winner"),
+    (10046,   "Bryson DeChambeau",  "USA", "U.S. Open winner"),
+    (5553,    "Tyrrell Hatton",     "ENG", "OWGR top 50"),
+    (5579,    "Patrick Reed",       "USA", "Masters winner"),
+    (6798,    "Brooks Koepka",      "USA", "4x Major winner"),
+    (3448,    "Dustin Johnson",     "USA", "2x Major winner"),
+    (9131,    "Cameron Smith",      "AUS", "Open Championship winner"),
+    (308,     "Phil Mickelson",     "USA", "6x Major winner, PGA Champ winner"),
 ]
 
 # ESPN event IDs for major/signature events (for course history)
@@ -459,6 +488,104 @@ def build_player_data(player_id, name_hint, rank_index):
     return player
 
 
+def build_liv_player(player_id, name, country, note, rank_index):
+    """
+    Build data for a LIV Golf player who plays Majors.
+    These players won't have current PGA Tour season stats, so we:
+    1. Try to pull whatever ESPN stats exist (may be from older PGA seasons)
+    2. Pull major championship results from event history
+    3. Mark them as LIV so the dashboard can flag them
+    """
+    print(f"  [LIV] Fetching {name}...", end=" ", flush=True)
+
+    # Get player info
+    info = get_player_info(player_id)
+    if not info:
+        info = {"name": name, "country": country}
+    else:
+        info["country"] = country  # Override with known country
+    time.sleep(REQUEST_DELAY)
+
+    # Try to get season stats (will likely fall back to 2024 or 2023)
+    stats = get_season_stats(player_id)
+    time.sleep(REQUEST_DELAY)
+
+    # Get results — focus on major results for course history
+    print("results...", end=" ", flush=True)
+    form, course_hist = get_recent_results(player_id, max_events=10)
+
+    if not form:
+        form = [20] * 10
+    while len(form) < 10:
+        form.append(30)
+    form = form[:10]
+
+    # If no stats found, use reasonable defaults based on their caliber
+    if not stats:
+        # These are elite players, use above-average defaults
+        stats = {
+            "yardsPerDrive": 305.0,
+            "driveAccuracyPct": 60.0,
+            "greensInRegPct": 68.0,
+            "savePct": 58.0,
+            "puttsGirAvg": 1.73,
+            "birdiesPerRound": 4.0,
+            "adjustedScoringAverage": 70.5,
+            "wins": 0,
+            "topTenFinishes": 0,
+            "tournamentsPlayed": 0,
+        }
+
+    drive_dist = round(stats.get("yardsPerDrive", 305.0), 1)
+    if drive_dist == 0: drive_dist = 305.0
+    drive_acc = round(stats.get("driveAccuracyPct", 60.0), 1)
+    if drive_acc == 0: drive_acc = 60.0
+    gir_pct = round(stats.get("greensInRegPct", 68.0), 1)
+    if gir_pct == 0: gir_pct = 68.0
+    scramble = round(stats.get("savePct", 58.0), 1)
+    if scramble == 0: scramble = 58.0
+    birdies_rd = round(stats.get("birdiesPerRound", 4.0), 1)
+    if birdies_rd == 0: birdies_rd = 4.0
+
+    sg = estimate_strokes_gained(stats)
+    scoring_avg = stats.get("adjustedScoringAverage", 70.5)
+    if isinstance(scoring_avg, str):
+        try: scoring_avg = float(scoring_avg)
+        except ValueError: scoring_avg = 70.5
+    if scoring_avg == 0: scoring_avg = 70.5
+
+    par3_est = round(3.05 - sg["tot"] * 0.02, 2)
+    par5_est = round(4.50 - sg["tot"] * 0.03, 2)
+
+    # LIV players get higher DK salaries in majors (name recognition + skill)
+    salary = max(7000, min(11000, int(7500 + (71.0 - scoring_avg) * 1500)))
+    salary = round(salary / 100) * 100
+    ownership = round(min(20, max(3, salary / 600)), 1)
+
+    player = {
+        "id": rank_index + 1,
+        "n": info["name"],
+        "c": info["country"],
+        "dk": salary,
+        "own": ownership,
+        "form": form,
+        "ch": course_hist,
+        "sg": sg,
+        "dr": {"dist": round(drive_dist), "acc": drive_acc},
+        "gir": gir_pct,
+        "scr": scramble,
+        "brd": birdies_rd,
+        "par3": par3_est,
+        "par5": par5_est,
+        "liv": True,  # Flag for dashboard to show LIV badge
+        "majors_only": note,
+    }
+
+    ch_count = sum(1 for v in course_hist.values() if v)
+    print(f"OK (SG:{sg['tot']:+.2f}, {len(form)} results, {ch_count} course histories)")
+    return player
+
+
 def generate_data_js(players):
     """Generate the data.js file content."""
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -503,12 +630,30 @@ def main():
             print(f"ERROR: {e}")
             failed.append(name)
 
+    # Fetch LIV players (majors-eligible)
+    print(f"\n{'─' * 60}")
+    print(f"Fetching LIV Golf players (majors-eligible)...")
+    print(f"{'─' * 60}")
+    liv_count = 0
+    for pid, name, country, note in LIV_PLAYERS:
+        try:
+            idx = len(players)
+            player = build_liv_player(pid, name, country, note, idx)
+            if player:
+                players.append(player)
+                liv_count += 1
+            else:
+                failed.append(f"{name} (LIV)")
+        except Exception as e:
+            print(f"ERROR: {e}")
+            failed.append(f"{name} (LIV)")
+
     if not players:
         print("\nERROR: No player data fetched. Check your internet connection.")
         sys.exit(1)
 
     print(f"\n{'=' * 60}")
-    print(f"Fetched {len(players)} players successfully")
+    print(f"Fetched {len(players)} players ({len(players) - liv_count} PGA + {liv_count} LIV)")
     if failed:
         print(f"Failed: {', '.join(failed)}")
 

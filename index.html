@@ -437,7 +437,7 @@ function renderTable() {
     return '<tr>' + cols.map(c => {
       switch (c.k) {
         case '_rank': return `<td class="rk ${rc}">${rk}</td>`;
-        case '_name': return `<td><div class="pc"><div class="av" style="background:${ac}18;color:${ac}">${ini}</div><div><div class="pn">${p.n}</div><div class="py">${p.c}</div></div></div></td>`;
+        case '_name': { const livBadge = p.liv ? ' <span style="background:var(--orange-d);color:var(--orange);padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;margin-left:4px;vertical-align:middle" title="'+(p.majors_only||'LIV Golf - Majors only')+'">LIV</span>' : ''; return `<td><div class="pc"><div class="av" style="background:${ac}18;color:${ac}">${ini}</div><div><div class="pn">${p.n}${livBadge}</div><div class="py">${p.c}</div></div></div></td>`; }
         case '_tier': return `<td><span class="tier ${tierCls[p._tier]}">${p._tier}</span></td>`;
         case '_score': {
           const pct = (p._score / maxScore * 100).toFixed(0);
