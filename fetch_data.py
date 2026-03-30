@@ -631,9 +631,9 @@ def main():
             failed.append(name)
 
     # Fetch LIV players (majors-eligible)
-    print(f"\n{'─' * 60}")
+    print(f"\n{'=' * 60}")
     print(f"Fetching LIV Golf players (majors-eligible)...")
-    print(f"{'─' * 60}")
+    print(f"{'=' * 60}")
     liv_count = 0
     for pid, name, country, note in LIV_PLAYERS:
         try:
