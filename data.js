@@ -1,11 +1,11 @@
-// PGA Fantasy Model — Auto-generated from ESPN data
+// PGA Fantasy Model â€” Auto-generated from ESPN data
 // Generated: 2026-03-30 13:45
 // Players: 39
 //
 // Strokes gained values are ESTIMATED from available ESPN stats.
 // For precise SG data, supplement with DataGolf or PGA Tour stats.
-// DraftKings salaries are estimated — replace with real DK CSV export
-// before setting lineups. Download from DraftKings lobby → Export CSV.
+// DraftKings salaries are estimated â€” replace with real DK CSV export
+// before setting lineups. Download from DraftKings lobby â†’ Export CSV.
 //
 // To manually adjust any values, edit them below and save.
 
@@ -1019,8 +1019,8 @@ const PLAYERS = [
     "id": 17,
     "n": "Sungjae Im",
     "c": "KOR",
-    "dk": 12500,
-    "own": 34.7,
+    "dk": 7700,
+    "own": 8.2,
     "form": [
       7,
       11,
@@ -1060,28 +1060,28 @@ const PLAYERS = [
       ]
     },
     "sg": {
-      "tot": 56.8,
-      "ott": -3.29,
-      "app": -4.02,
-      "atg": -1.1,
-      "put": 4.42
+      "tot": 0.15,
+      "ott": 0.09,
+      "app": -0.26,
+      "atg": 0.09,
+      "put": 0.05
     },
     "dr": {
-      "dist": 0,
-      "acc": 0.0
+      "dist": 297,
+      "acc": 68.0
     },
-    "gir": 0.0,
-    "scr": 0.0,
-    "brd": 0.0,
-    "par3": 1.91,
-    "par5": 2.8
+    "gir": 62.6,
+    "scr": 59.5,
+    "brd": 3.9,
+    "par3": 3.05,
+    "par5": 4.48
   },
   {
     "id": 18,
     "n": "Justin Thomas",
     "c": "USA",
-    "dk": 12500,
-    "own": 33.4,
+    "dk": 7500,
+    "own": 9.5,
     "form": [
       3,
       2,
@@ -1122,21 +1122,21 @@ const PLAYERS = [
       ]
     },
     "sg": {
-      "tot": 56.8,
-      "ott": -3.29,
-      "app": -4.02,
-      "atg": -1.1,
-      "put": 4.42
+      "tot": 0.65,
+      "ott": 0.08,
+      "app": -0.1,
+      "atg": 0.16,
+      "put": 0.05
     },
     "dr": {
-      "dist": 0,
-      "acc": 0.0
+      "dist": 305,
+      "acc": 53.3
     },
-    "gir": 0.0,
-    "scr": 0.0,
-    "brd": 0.0,
-    "par3": 1.91,
-    "par5": 2.8
+    "gir": 65.3,
+    "scr": 62.9,
+    "brd": 4.5,
+    "par3": 3.03,
+    "par5": 4.46
   },
   {
     "id": 19,
@@ -2431,8 +2431,8 @@ const PLAYERS = [
     "id": 39,
     "n": "Will Zalatoris",
     "c": "USA",
-    "dk": 12500,
-    "own": 7.2,
+    "dk": 6200,
+    "own": 4.5,
     "form": [
       41,
       13,
@@ -2470,21 +2470,21 @@ const PLAYERS = [
       ]
     },
     "sg": {
-      "tot": 56.8,
-      "ott": -3.29,
-      "app": -4.02,
-      "atg": -1.1,
-      "put": 4.42
+      "tot": 0.12,
+      "ott": 0.06,
+      "app": -0.1,
+      "atg": 0.04,
+      "put": -0.05
     },
     "dr": {
-      "dist": 0,
-      "acc": 0.0
+      "dist": 303,
+      "acc": 60.0
     },
-    "gir": 0.0,
-    "scr": 0.0,
-    "brd": 0.0,
-    "par3": 1.91,
-    "par5": 2.8
+    "gir": 65.3,
+    "scr": 56.9,
+    "brd": 3.4,
+    "par3": 3.05,
+    "par5": 4.52
   },
   {
     "id": 40,
