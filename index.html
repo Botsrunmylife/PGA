@@ -63,6 +63,9 @@ select.ev:focus{outline:none;border-color:var(--green)}
 table{width:100%;border-collapse:collapse;font-size:12px}
 thead th{padding:8px 12px;text-align:left;font-weight:700;color:var(--t3);font-size:10px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);cursor:pointer;white-space:nowrap;user-select:none;position:sticky;top:0;background:var(--s1)}
 thead th:hover{color:var(--t2)} thead th.sd{color:var(--green)}
+thead th[title]{position:relative;cursor:help}
+thead th[title]:hover::after{content:attr(title);position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#2a2e3e;color:var(--t1);padding:5px 10px;border-radius:6px;font-size:11px;font-weight:500;text-transform:none;letter-spacing:0;white-space:nowrap;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.4);border:1px solid var(--border);pointer-events:none}
+thead th[title]:hover::before{content:'';position:absolute;bottom:calc(100% + 0px);left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#2a2e3e;z-index:21;pointer-events:none}
 tbody tr{border-bottom:1px solid var(--border);transition:background .1s} tbody tr:hover{background:var(--s2)}
 tbody td{padding:7px 12px;white-space:nowrap}
 .rk{font-weight:800;color:var(--t3);width:32px;text-align:center}
@@ -341,13 +344,51 @@ function renderStrip() {
 
 function getColsForTab() {
   const base = [{k:'_rank',l:'#',w:'36px'},{k:'_name',l:'Player'}];
-  const add = (k,l) => ({k,l,sort:true});
+  const add = (k,l,tip) => ({k,l,sort:true,tip});
   switch(curTab) {
-    case 'proj': return [...base, {k:'_tier',l:'Tier'}, add('_score','Model Score'), add('sg.tot','SG: Total'), add('_cfScore','Course Fit'), add('_chScore','Course Hx'), add('_trend','Trend'), add('dk','Salary'), add('own','Own%'), {k:'_act',l:''}];
-    case 'sg': return [...base, add('sg.tot','SG: Total'), add('sg.ott','SG: OTT'), add('sg.app','SG: APP'), add('sg.atg','SG: ATG'), add('sg.put','SG: Putt'), add('gir','GIR%'), add('_score','Score'), {k:'_act',l:''}];
-    case 'form': return [...base, {k:'_spark',l:'Last 10 (← Recent)'}, add('_score','Score'), add('_trend','Trend'), add('brd','Birdies/Rd'), add('par3','Par 3 Avg'), add('par5','Par 5 Avg'), {k:'_act',l:''}];
-    case 'course': return [...base, add('_cfScore','Course Fit'), add('_chScore','Course Hx'), {k:'_chDetail',l:'Past Results'}, add('sg.app','SG: APP'), add('sg.ott','SG: OTT'), add('_score','Score'), {k:'_act',l:''}];
-    case 'dfs': return [...base, add('dk','Salary'), add('_score','Score'), add('_dfsVal','Value'), add('own','Own%'), add('_leverage','Leverage'), {k:'_tier',l:'Tier'}, {k:'_act',l:''}];
+    case 'proj': return [...base,
+      {k:'_tier',l:'Tier',tip:'Player tier ranking (S/A/B/C) based on overall model score'},
+      add('_score','Model Score','Composite fantasy projection score from all weighted model factors'),
+      add('sg.tot','SG: Total','Strokes Gained: Total — strokes better than field average per round'),
+      add('_cfScore','Course Fit','How well the player\'s skill profile matches this course\'s demands (0-10)'),
+      add('_chScore','Course Hx','Course History — past performance at this specific venue (0-10)'),
+      add('_trend','Trend','Form trend — positive means improving (recent 3 events vs older 3 events)'),
+      add('dk','Salary','DraftKings salary'),
+      add('own','Own%','Projected DraftKings ownership percentage'),
+      {k:'_act',l:''}];
+    case 'sg': return [...base,
+      add('sg.tot','SG: Total','Strokes Gained: Total — overall strokes better than field per round'),
+      add('sg.ott','SG: OTT','Strokes Gained: Off the Tee — driving performance vs field'),
+      add('sg.app','SG: APP','Strokes Gained: Approach — iron play into greens vs field'),
+      add('sg.atg','SG: ATG','Strokes Gained: Around the Green — chipping and pitching vs field'),
+      add('sg.put','SG: Putt','Strokes Gained: Putting — putting performance vs field'),
+      add('gir','GIR%','Greens in Regulation percentage — hitting the green in the expected number of strokes'),
+      add('_score','Score','Composite fantasy projection score'),
+      {k:'_act',l:''}];
+    case 'form': return [...base,
+      {k:'_spark',l:'Last 10 (← Recent)',tip:'Finish positions in last 10 tournaments — taller bars = better finishes'},
+      add('_score','Score','Composite fantasy projection score'),
+      add('_trend','Trend','Form trend — positive means improving (recent 3 events vs older 3 events)'),
+      add('brd','Birdies/Rd','Average birdies made per round this season'),
+      add('par3','Par 3 Avg','Average score on par 3 holes (lower is better)'),
+      add('par5','Par 5 Avg','Average score on par 5 holes (lower is better)'),
+      {k:'_act',l:''}];
+    case 'course': return [...base,
+      add('_cfScore','Course Fit','How well the player\'s skill profile matches this course\'s demands (0-10)'),
+      add('_chScore','Course Hx','Course History — weighted score from past finishes at this venue (0-10)'),
+      {k:'_chDetail',l:'Past Results',tip:'Actual past finish positions at this venue (most recent years)'},
+      add('sg.app','SG: APP','Strokes Gained: Approach — iron play into greens vs field'),
+      add('sg.ott','SG: OTT','Strokes Gained: Off the Tee — driving performance vs field'),
+      add('_score','Score','Composite fantasy projection score'),
+      {k:'_act',l:''}];
+    case 'dfs': return [...base,
+      add('dk','Salary','DraftKings salary'),
+      add('_score','Score','Composite fantasy projection score'),
+      add('_dfsVal','Value','Points per $1,000 salary — higher means better value for the price'),
+      add('own','Own%','Projected DraftKings ownership percentage'),
+      add('_leverage','Leverage','Model projection vs ownership — positive = underowned relative to skill (contrarian edge)'),
+      {k:'_tier',l:'Tier',tip:'Player tier ranking (S/A/B/C) based on overall model score'},
+      {k:'_act',l:''}];
   }
 }
 
@@ -368,7 +409,8 @@ function renderTable() {
     const cls = c.sort && sortK === c.k ? 'sd' : '';
     const arr = c.sort && sortK === c.k ? (sortD === -1 ? ' &#9660;' : ' &#9650;') : '';
     const oc = c.sort ? `onclick="doSort('${c.k}')"` : '';
-    return `<th class="${cls}" ${oc}>${c.l}${arr}</th>`;
+    const tip = c.tip ? `title="${c.tip}"` : '';
+    return `<th class="${cls}" ${oc} ${tip}>${c.l}${arr}</th>`;
   }).join('') + '</tr>';
 
   $('tBody').innerHTML = ps.map((p, i) => {
