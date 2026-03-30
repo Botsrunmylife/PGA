@@ -63,9 +63,9 @@ select.ev:focus{outline:none;border-color:var(--green)}
 table{width:100%;border-collapse:collapse;font-size:12px}
 thead th{padding:8px 12px;text-align:left;font-weight:700;color:var(--t3);font-size:10px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);cursor:pointer;white-space:nowrap;user-select:none;position:sticky;top:0;background:var(--s1)}
 thead th:hover{color:var(--t2)} thead th.sd{color:var(--green)}
-thead th[title]{position:relative;cursor:help}
-thead th[title]:hover::after{content:attr(title);position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:#2a2e3e;color:var(--t1);padding:5px 10px;border-radius:6px;font-size:11px;font-weight:500;text-transform:none;letter-spacing:0;white-space:nowrap;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.4);border:1px solid var(--border);pointer-events:none}
-thead th[title]:hover::before{content:'';position:absolute;bottom:calc(100% + 0px);left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#2a2e3e;z-index:21;pointer-events:none}
+thead th[data-tip]{position:relative;cursor:help;text-decoration:underline dotted var(--t3);text-underline-offset:3px}
+thead th[data-tip]:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:#1e2235;color:var(--t1);padding:6px 12px;border-radius:6px;font-size:11px;font-weight:500;text-transform:none;letter-spacing:0;white-space:nowrap;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,.5);border:1px solid var(--border);pointer-events:none;animation:fadeIn .15s ease}
+thead th[data-tip]:hover::before{content:'';position:absolute;bottom:calc(100% + 1px);left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#1e2235;z-index:101;pointer-events:none}
 tbody tr{border-bottom:1px solid var(--border);transition:background .1s} tbody tr:hover{background:var(--s2)}
 tbody td{padding:7px 12px;white-space:nowrap}
 .rk{font-weight:800;color:var(--t3);width:32px;text-align:center}
@@ -197,6 +197,20 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;heigh
 
 <script src="data.js"></script>
 <script>
+// ===================== DATA ADAPTER =====================
+// Normalize EVENTS keys: fetch_data.py uses full names, dashboard uses short names
+(function() {
+  for (const k in EVENTS) {
+    const ev = EVENTS[k];
+    if (ev.name && !ev.nm) {
+      ev.nm = ev.name;
+      ev.cr = ev.course;
+      ev.tp = ev.type;
+      // sz, par, yds, emph, traits, purse are the same in both formats
+    }
+  }
+})();
+
 // ===================== STATE =====================
 let curEv = 'masters', curTab = 'proj', curTier = 'all', sortK = '_score', sortD = -1, lineup = [];
 const MAXLU = 6, SALCAP = 50000;
@@ -409,7 +423,7 @@ function renderTable() {
     const cls = c.sort && sortK === c.k ? 'sd' : '';
     const arr = c.sort && sortK === c.k ? (sortD === -1 ? ' &#9660;' : ' &#9650;') : '';
     const oc = c.sort ? `onclick="doSort('${c.k}')"` : '';
-    const tip = c.tip ? `title="${c.tip}"` : '';
+    const tip = c.tip ? `data-tip="${c.tip}"` : '';
     return `<th class="${cls}" ${oc} ${tip}>${c.l}${arr}</th>`;
   }).join('') + '</tr>';
 
