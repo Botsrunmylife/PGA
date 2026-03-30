@@ -1,11 +1,11 @@
-// PGA Fantasy Model â€” Auto-generated from ESPN data
-// Generated: 2026-03-30 13:45
-// Players: 39
+// PGA Fantasy Model — Auto-generated from ESPN data
+// Generated: 2026-03-30 16:32
+// Players: 60
 //
 // Strokes gained values are ESTIMATED from available ESPN stats.
 // For precise SG data, supplement with DataGolf or PGA Tour stats.
-// DraftKings salaries are estimated â€” replace with real DK CSV export
-// before setting lineups. Download from DraftKings lobby â†’ Export CSV.
+// DraftKings salaries are estimated — replace with real DK CSV export
+// before setting lineups. Download from DraftKings lobby → Export CSV.
 //
 // To manually adjust any values, edit them below and save.
 
@@ -358,11 +358,11 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 7,
+    "id": 6,
     "n": "Wyndham Clark",
     "c": "USA",
     "dk": 8500,
-    "own": 32.1,
+    "own": 32.9,
     "form": [
       17,
       8,
@@ -422,10 +422,10 @@ const PLAYERS = [
     "par5": 4.51
   },
   {
-    "id": 8,
+    "id": 7,
     "n": "Viktor Hovland",
     "c": "NOR",
-    "dk": 9800,
+    "dk": 9900,
     "own": 35,
     "form": [
       12,
@@ -489,10 +489,10 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 9,
+    "id": 8,
     "n": "Patrick Cantlay",
     "c": "USA",
-    "dk": 10100,
+    "dk": 10200,
     "own": 35,
     "form": [
       11,
@@ -554,10 +554,10 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 10,
+    "id": 9,
     "n": "Tommy Fleetwood",
     "c": "ENG",
-    "dk": 11100,
+    "dk": 11200,
     "own": 35,
     "form": [
       3,
@@ -624,7 +624,7 @@ const PLAYERS = [
     "par5": 4.49
   },
   {
-    "id": 11,
+    "id": 10,
     "n": "Hideki Matsuyama",
     "c": "JPN",
     "dk": 11700,
@@ -692,7 +692,7 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 12,
+    "id": 11,
     "n": "Sahith Theegala",
     "c": "USA",
     "dk": 11800,
@@ -758,7 +758,7 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 13,
+    "id": 12,
     "n": "Shane Lowry",
     "c": "IRL",
     "dk": 11300,
@@ -823,11 +823,11 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 14,
+    "id": 13,
     "n": "Tony Finau",
     "c": "USA",
-    "dk": 9100,
-    "own": 28.0,
+    "dk": 9200,
+    "own": 29.2,
     "form": [
       23,
       13,
@@ -888,11 +888,11 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 15,
+    "id": 14,
     "n": "Max Homa",
     "c": "USA",
-    "dk": 8400,
-    "own": 25.0,
+    "dk": 8500,
+    "own": 26.1,
     "form": [
       27,
       33,
@@ -951,11 +951,11 @@ const PLAYERS = [
     "par5": 4.51
   },
   {
-    "id": 16,
+    "id": 15,
     "n": "Russell Henley",
     "c": "USA",
     "dk": 11400,
-    "own": 32.8,
+    "own": 33.9,
     "form": [
       19,
       4,
@@ -1016,11 +1016,11 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 17,
+    "id": 16,
     "n": "Sungjae Im",
     "c": "KOR",
-    "dk": 7700,
-    "own": 8.2,
+    "dk": 10200,
+    "own": 29.3,
     "form": [
       7,
       11,
@@ -1061,10 +1061,10 @@ const PLAYERS = [
     },
     "sg": {
       "tot": 0.15,
-      "ott": 0.09,
+      "ott": 0.11,
       "app": -0.26,
       "atg": 0.09,
-      "put": 0.05
+      "put": 0.1
     },
     "dr": {
       "dist": 297,
@@ -1074,14 +1074,14 @@ const PLAYERS = [
     "scr": 59.5,
     "brd": 3.9,
     "par3": 3.05,
-    "par5": 4.48
+    "par5": 4.5
   },
   {
-    "id": 18,
+    "id": 17,
     "n": "Justin Thomas",
     "c": "USA",
-    "dk": 7500,
-    "own": 9.5,
+    "dk": 12500,
+    "own": 34.7,
     "form": [
       3,
       2,
@@ -1123,10 +1123,10 @@ const PLAYERS = [
     },
     "sg": {
       "tot": 0.65,
-      "ott": 0.08,
+      "ott": -0.05,
       "app": -0.1,
       "atg": 0.16,
-      "put": 0.05
+      "put": 0.23
     },
     "dr": {
       "dist": 305,
@@ -1135,15 +1135,15 @@ const PLAYERS = [
     "gir": 65.3,
     "scr": 62.9,
     "brd": 4.5,
-    "par3": 3.03,
-    "par5": 4.46
+    "par3": 3.04,
+    "par5": 4.48
   },
   {
-    "id": 19,
+    "id": 18,
     "n": "Sam Burns",
     "c": "USA",
-    "dk": 9600,
-    "own": 24.7,
+    "dk": 9700,
+    "own": 25.9,
     "form": [
       14,
       12,
@@ -1204,11 +1204,11 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 20,
+    "id": 19,
     "n": "Tom Kim",
     "c": "KOR",
-    "dk": 9300,
-    "own": 23.0,
+    "dk": 9400,
+    "own": 24.2,
     "form": [
       50,
       8,
@@ -1270,11 +1270,11 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 21,
+    "id": 20,
     "n": "Keegan Bradley",
     "c": "USA",
-    "dk": 7500,
-    "own": 17.8,
+    "dk": 7600,
+    "own": 18.8,
     "form": [
       5,
       21,
@@ -1334,11 +1334,11 @@ const PLAYERS = [
     "par5": 4.52
   },
   {
-    "id": 22,
+    "id": 21,
     "n": "Corey Conners",
     "c": "CAN",
-    "dk": 8700,
-    "own": 19.8,
+    "dk": 8800,
+    "own": 20.9,
     "form": [
       7,
       22,
@@ -1404,11 +1404,11 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 23,
+    "id": 22,
     "n": "Brian Harman",
     "c": "USA",
     "dk": 6700,
-    "own": 14.6,
+    "own": 15.2,
     "form": [
       25,
       25,
@@ -1472,11 +1472,11 @@ const PLAYERS = [
     "par5": 4.53
   },
   {
-    "id": 24,
+    "id": 23,
     "n": "Akshay Bhatia",
     "c": "USA",
     "dk": 11700,
-    "own": 24.3,
+    "own": 25.4,
     "form": [
       45,
       12,
@@ -1533,11 +1533,11 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 25,
+    "id": 24,
     "n": "Min Woo Lee",
     "c": "AUS",
     "dk": 12000,
-    "own": 23.7,
+    "own": 24.9,
     "form": [
       24,
       23,
@@ -1602,11 +1602,11 @@ const PLAYERS = [
     "par5": 4.47
   },
   {
-    "id": 26,
+    "id": 25,
     "n": "Cameron Young",
     "c": "USA",
     "dk": 12000,
-    "own": 22.5,
+    "own": 23.7,
     "form": [
       13,
       43,
@@ -1668,11 +1668,11 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 27,
+    "id": 26,
     "n": "Matt Fitzpatrick",
     "c": "ENG",
     "dk": 12000,
-    "own": 21.3,
+    "own": 22.5,
     "form": [
       35,
       27,
@@ -1737,11 +1737,11 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 28,
+    "id": 27,
     "n": "Sepp Straka",
     "c": "AUT",
     "dk": 8800,
-    "own": 14.7,
+    "own": 15.6,
     "form": [
       29,
       38,
@@ -1802,11 +1802,11 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 29,
+    "id": 28,
     "n": "Denny McCarthy",
     "c": "USA",
-    "dk": 8000,
-    "own": 12.6,
+    "dk": 8100,
+    "own": 13.6,
     "form": [
       25,
       26,
@@ -1868,11 +1868,11 @@ const PLAYERS = [
     "par5": 4.51
   },
   {
-    "id": 30,
+    "id": 29,
     "n": "Billy Horschel",
     "c": "USA",
-    "dk": 6700,
-    "own": 9.9,
+    "dk": 6800,
+    "own": 10.7,
     "form": [
       1,
       23,
@@ -1924,11 +1924,11 @@ const PLAYERS = [
     "par5": 4.52
   },
   {
-    "id": 31,
+    "id": 30,
     "n": "Robert MacIntyre",
     "c": "SCO",
-    "dk": 10300,
-    "own": 14.2,
+    "dk": 10400,
+    "own": 15.3,
     "form": [
       7,
       50,
@@ -1987,11 +1987,11 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 32,
+    "id": 31,
     "n": "Aaron Rai",
     "c": "ENG",
     "dk": 7400,
-    "own": 9.4,
+    "own": 10.2,
     "form": [
       42,
       23,
@@ -2052,11 +2052,11 @@ const PLAYERS = [
     "par5": 4.51
   },
   {
-    "id": 33,
+    "id": 32,
     "n": "Chris Kirk",
     "c": "USA",
     "dk": 6900,
-    "own": 8.1,
+    "own": 8.8,
     "form": [
       35,
       27,
@@ -2112,11 +2112,11 @@ const PLAYERS = [
     "par5": 4.52
   },
   {
-    "id": 34,
+    "id": 33,
     "n": "Taylor Pendrith",
     "c": "CAN",
     "dk": 7300,
-    "own": 7.8,
+    "own": 8.6,
     "form": [
       8,
       14,
@@ -2174,11 +2174,11 @@ const PLAYERS = [
     "par5": 4.51
   },
   {
-    "id": 35,
+    "id": 34,
     "n": "Davis Thompson",
     "c": "USA",
     "dk": 8000,
-    "own": 7.8,
+    "own": 8.6,
     "form": [
       5,
       41,
@@ -2231,11 +2231,11 @@ const PLAYERS = [
     "par5": 4.51
   },
   {
-    "id": 36,
+    "id": 35,
     "n": "Adam Scott",
     "c": "AUS",
     "dk": 10100,
-    "own": 8.8,
+    "own": 9.8,
     "form": [
       46,
       57,
@@ -2302,11 +2302,11 @@ const PLAYERS = [
     "par5": 4.48
   },
   {
-    "id": 37,
+    "id": 36,
     "n": "Jason Day",
     "c": "AUS",
-    "dk": 8800,
-    "own": 6.8,
+    "dk": 8900,
+    "own": 7.8,
     "form": [
       19,
       33,
@@ -2366,11 +2366,11 @@ const PLAYERS = [
     "par5": 4.5
   },
   {
-    "id": 38,
+    "id": 37,
     "n": "Maverick McNealy",
     "c": "USA",
     "dk": 9600,
-    "own": 6.5,
+    "own": 7.4,
     "form": [
       6,
       16,
@@ -2428,11 +2428,11 @@ const PLAYERS = [
     "par5": 4.49
   },
   {
-    "id": 39,
+    "id": 38,
     "n": "Will Zalatoris",
     "c": "USA",
-    "dk": 6200,
-    "own": 4.5,
+    "dk": 9100,
+    "own": 6.1,
     "form": [
       41,
       13,
@@ -2471,27 +2471,27 @@ const PLAYERS = [
     },
     "sg": {
       "tot": 0.12,
-      "ott": 0.06,
+      "ott": 0.03,
       "app": -0.1,
       "atg": 0.04,
-      "put": -0.05
+      "put": -0.08
     },
     "dr": {
-      "dist": 303,
+      "dist": 302,
       "acc": 60.0
     },
     "gir": 65.3,
     "scr": 56.9,
     "brd": 3.4,
     "par3": 3.05,
-    "par5": 4.52
+    "par5": 4.5
   },
   {
-    "id": 40,
+    "id": 39,
     "n": "Austin Eckroat",
     "c": "USA",
     "dk": 7600,
-    "own": 3.6,
+    "own": 4.4,
     "form": [
       1,
       46,
@@ -2544,6 +2544,1219 @@ const PLAYERS = [
     "brd": 4.1,
     "par3": 3.05,
     "par5": 4.51
+  },
+  {
+    "id": 40,
+    "n": "Justin Rose",
+    "c": "ENG",
+    "dk": 8900,
+    "own": 4.2,
+    "form": [
+      34,
+      68,
+      13,
+      48,
+      22,
+      2,
+      68,
+      32,
+      6,
+      52
+    ],
+    "ch": {
+      "masters": [
+        2
+      ],
+      "players": [
+        13
+      ],
+      "us_open": [],
+      "open": [],
+      "pga": [
+        48,
+        6,
+        61
+      ],
+      "memorial": [
+        44
+      ],
+      "arnold_palmer": [
+        8
+      ],
+      "genesis": [
+        6
+      ]
+    },
+    "sg": {
+      "tot": -0.05,
+      "ott": -0.01,
+      "app": 0.3,
+      "atg": 0.07,
+      "put": 0.14
+    },
+    "dr": {
+      "dist": 304,
+      "acc": 56.8
+    },
+    "gir": 71.9,
+    "scr": 58.6,
+    "brd": 4.4,
+    "par3": 3.05,
+    "par5": 4.5
+  },
+  {
+    "id": 41,
+    "n": "Chris Gotterup",
+    "c": "USA",
+    "dk": 12300,
+    "own": 4.6,
+    "form": [
+      71,
+      45,
+      22,
+      59,
+      67,
+      61,
+      1,
+      24,
+      57,
+      61
+    ],
+    "ch": {
+      "masters": [],
+      "players": [
+        56
+      ],
+      "us_open": [
+        23
+      ],
+      "open": [],
+      "pga": [],
+      "memorial": [],
+      "arnold_palmer": [
+        18
+      ],
+      "genesis": [
+        1
+      ]
+    },
+    "sg": {
+      "tot": 0.85,
+      "ott": 0.06,
+      "app": 0.1,
+      "atg": 0.17,
+      "put": 0.13
+    },
+    "dr": {
+      "dist": 320,
+      "acc": 52.9
+    },
+    "gir": 68.7,
+    "scr": 63.4,
+    "brd": 4.4,
+    "par3": 3.03,
+    "par5": 4.47
+  },
+  {
+    "id": 42,
+    "n": "J.J. Spaun",
+    "c": "USA",
+    "dk": 6400,
+    "own": 2,
+    "form": [
+      6,
+      34,
+      25,
+      26,
+      3,
+      9,
+      29,
+      44,
+      23,
+      10
+    ],
+    "ch": {
+      "masters": [
+        50
+      ],
+      "players": [
+        64,
+        2,
+        24
+      ],
+      "us_open": [
+        1
+      ],
+      "open": [],
+      "pga": [
+        37
+      ],
+      "memorial": [],
+      "arnold_palmer": [
+        31
+      ],
+      "genesis": [
+        34
+      ]
+    },
+    "sg": {
+      "tot": -0.64,
+      "ott": 0.06,
+      "app": -0.0,
+      "atg": -0.22,
+      "put": -0.08
+    },
+    "dr": {
+      "dist": 302,
+      "acc": 62.6
+    },
+    "gir": 66.9,
+    "scr": 43.9,
+    "brd": 3.6,
+    "par3": 3.06,
+    "par5": 4.52
+  },
+  {
+    "id": 43,
+    "n": "Ben Griffin",
+    "c": "USA",
+    "dk": 8400,
+    "own": 2.1,
+    "form": [
+      39,
+      5,
+      31,
+      67,
+      2,
+      16,
+      13,
+      14,
+      39,
+      36
+    ],
+    "ch": {
+      "masters": [],
+      "players": [],
+      "us_open": [
+        10
+      ],
+      "open": [],
+      "pga": [
+        8
+      ],
+      "memorial": [
+        2
+      ],
+      "arnold_palmer": [
+        45
+      ],
+      "genesis": [
+        39,
+        37,
+        44,
+        41
+      ]
+    },
+    "sg": {
+      "tot": 0.15,
+      "ott": 0.05,
+      "app": 0.09,
+      "atg": 0.22,
+      "put": 0.09
+    },
+    "dr": {
+      "dist": 301,
+      "acc": 62.3
+    },
+    "gir": 68.5,
+    "scr": 66.0,
+    "brd": 4.0,
+    "par3": 3.05,
+    "par5": 4.5
+  },
+  {
+    "id": 44,
+    "n": "Jacob Bridgeman",
+    "c": "USA",
+    "dk": 12500,
+    "own": 3.1,
+    "form": [
+      14,
+      29,
+      46,
+      11,
+      12,
+      19,
+      31,
+      14,
+      46,
+      23
+    ],
+    "ch": {
+      "masters": [],
+      "players": [
+        50,
+        5
+      ],
+      "us_open": [],
+      "open": [],
+      "pga": [],
+      "memorial": [
+        31
+      ],
+      "arnold_palmer": [
+        15,
+        18
+      ],
+      "genesis": [
+        75,
+        1
+      ]
+    },
+    "sg": {
+      "tot": 1.2,
+      "ott": 0.04,
+      "app": 0.15,
+      "atg": -0.04,
+      "put": 0.3
+    },
+    "dr": {
+      "dist": 306,
+      "acc": 59.2
+    },
+    "gir": 69.4,
+    "scr": 52.9,
+    "brd": 5.0,
+    "par3": 3.03,
+    "par5": 4.46
+  },
+  {
+    "id": 45,
+    "n": "Alex Noren",
+    "c": "SWE",
+    "dk": 7400,
+    "own": 2,
+    "form": [
+      12,
+      30,
+      9,
+      30,
+      45,
+      13,
+      10,
+      22,
+      12,
+      24
+    ],
+    "ch": {
+      "masters": [
+        1
+      ],
+      "players": [
+        19,
+        32
+      ],
+      "us_open": [],
+      "open": [],
+      "pga": [
+        30,
+        12,
+        1,
+        17
+      ],
+      "memorial": [
+        22,
+        39
+      ],
+      "arnold_palmer": [
+        24
+      ],
+      "genesis": [
+        10,
+        12
+      ]
+    },
+    "sg": {
+      "tot": -0.26,
+      "ott": -0.04,
+      "app": -0.07,
+      "atg": 0.12,
+      "put": 0.15
+    },
+    "dr": {
+      "dist": 289,
+      "acc": 62.2
+    },
+    "gir": 65.9,
+    "scr": 61.1,
+    "brd": 4.3,
+    "par3": 3.06,
+    "par5": 4.51
+  },
+  {
+    "id": 46,
+    "n": "Harris English",
+    "c": "USA",
+    "dk": 8600,
+    "own": 2.1,
+    "form": [
+      14,
+      9,
+      6,
+      61,
+      50,
+      34,
+      63,
+      41,
+      18,
+      34
+    ],
+    "ch": {
+      "masters": [
+        22,
+        12
+      ],
+      "players": [
+        19,
+        30
+      ],
+      "us_open": [
+        41,
+        59
+      ],
+      "open": [],
+      "pga": [
+        18,
+        2
+      ],
+      "memorial": [
+        12
+      ],
+      "arnold_palmer": [
+        21,
+        24
+      ],
+      "genesis": [
+        34,
+        7,
+        22,
+        24,
+        22
+      ]
+    },
+    "sg": {
+      "tot": 0.25,
+      "ott": 0.07,
+      "app": -0.01,
+      "atg": -0.07,
+      "put": 0.16
+    },
+    "dr": {
+      "dist": 303,
+      "acc": 62.3
+    },
+    "gir": 66.9,
+    "scr": 51.5,
+    "brd": 4.6,
+    "par3": 3.04,
+    "par5": 4.49
+  },
+  {
+    "id": 47,
+    "n": "Ryan Gerard",
+    "c": "USA",
+    "dk": 9900,
+    "own": 2.5,
+    "form": [
+      23,
+      3,
+      7,
+      15,
+      11,
+      24,
+      25,
+      8,
+      16,
+      38
+    ],
+    "ch": {
+      "masters": [],
+      "players": [
+        42,
+        27
+      ],
+      "us_open": [
+        50
+      ],
+      "open": [],
+      "pga": [
+        8
+      ],
+      "memorial": [
+        8,
+        23
+      ],
+      "arnold_palmer": [],
+      "genesis": [
+        74,
+        28
+      ]
+    },
+    "sg": {
+      "tot": 0.61,
+      "ott": 0.07,
+      "app": 0.27,
+      "atg": -0.18,
+      "put": 0.15
+    },
+    "dr": {
+      "dist": 302,
+      "acc": 62.8
+    },
+    "gir": 71.5,
+    "scr": 45.8,
+    "brd": 4.5,
+    "par3": 3.04,
+    "par5": 4.48
+  },
+  {
+    "id": 48,
+    "n": "Si Woo Kim",
+    "c": "KOR",
+    "dk": 10300,
+    "own": 2.6,
+    "form": [
+      18,
+      5,
+      50,
+      43,
+      26,
+      31,
+      32,
+      15,
+      56,
+      16
+    ],
+    "ch": {
+      "masters": [
+        30
+      ],
+      "players": [
+        6,
+        38,
+        50
+      ],
+      "us_open": [
+        32,
+        42
+      ],
+      "open": [],
+      "pga": [
+        18,
+        8
+      ],
+      "memorial": [
+        15,
+        31
+      ],
+      "arnold_palmer": [
+        30,
+        19,
+        13
+      ],
+      "genesis": [
+        26,
+        44,
+        34,
+        24,
+        34
+      ]
+    },
+    "sg": {
+      "tot": 0.68,
+      "ott": 0.17,
+      "app": 0.23,
+      "atg": -0.08,
+      "put": 0.1
+    },
+    "dr": {
+      "dist": 299,
+      "acc": 71.4
+    },
+    "gir": 70.8,
+    "scr": 50.8,
+    "brd": 4.6,
+    "par3": 3.04,
+    "par5": 4.48
+  },
+  {
+    "id": 49,
+    "n": "Kurt Kitayama",
+    "c": "USA",
+    "dk": 8900,
+    "own": 2.2,
+    "form": [
+      5,
+      9,
+      25,
+      6,
+      41,
+      34,
+      31,
+      26,
+      34,
+      33
+    ],
+    "ch": {
+      "masters": [
+        35
+      ],
+      "players": [
+        19,
+        33
+      ],
+      "us_open": [],
+      "open": [],
+      "pga": [
+        26
+      ],
+      "memorial": [],
+      "arnold_palmer": [
+        18
+      ],
+      "genesis": [
+        34,
+        39,
+        2
+      ]
+    },
+    "sg": {
+      "tot": 0.26,
+      "ott": 0.07,
+      "app": 0.28,
+      "atg": 0.02,
+      "put": -0.02
+    },
+    "dr": {
+      "dist": 309,
+      "acc": 59.0
+    },
+    "gir": 71.6,
+    "scr": 55.9,
+    "brd": 3.8,
+    "par3": 3.04,
+    "par5": 4.49
+  },
+  {
+    "id": 50,
+    "n": "Nicolai H\u00f8jgaard",
+    "c": "DEN",
+    "dk": 11200,
+    "own": 2.8,
+    "form": [
+      65,
+      14,
+      7,
+      66,
+      39,
+      66,
+      50,
+      35,
+      68,
+      16
+    ],
+    "ch": {
+      "masters": [
+        16,
+        2
+      ],
+      "players": [
+        27
+      ],
+      "us_open": [
+        50
+      ],
+      "open": [],
+      "pga": [
+        65,
+        68,
+        41
+      ],
+      "memorial": [],
+      "arnold_palmer": [
+        24
+      ],
+      "genesis": [
+        39,
+        39,
+        4
+      ]
+    },
+    "sg": {
+      "tot": 1.05,
+      "ott": 0.04,
+      "app": 0.02,
+      "atg": -0.12,
+      "put": 0.08
+    },
+    "dr": {
+      "dist": 318,
+      "acc": 52.6
+    },
+    "gir": 67.3,
+    "scr": 48.8,
+    "brd": 4.0,
+    "par3": 3.03,
+    "par5": 4.47
+  },
+  {
+    "id": 51,
+    "n": "Nico Echavarria",
+    "c": "COL",
+    "dk": 7800,
+    "own": 2,
+    "form": [
+      11,
+      22,
+      35,
+      52,
+      63,
+      54,
+      24,
+      14,
+      15,
+      21
+    ],
+    "ch": {
+      "masters": [
+        51
+      ],
+      "players": [
+        66
+      ],
+      "us_open": [
+        54
+      ],
+      "open": [],
+      "pga": [
+        41
+      ],
+      "memorial": [],
+      "arnold_palmer": [
+        44
+      ],
+      "genesis": [
+        22,
+        34
+      ]
+    },
+    "sg": {
+      "tot": -0.56,
+      "ott": -0.02,
+      "app": 0.07,
+      "atg": -0.45,
+      "put": 0.14
+    },
+    "dr": {
+      "dist": 293,
+      "acc": 61.7
+    },
+    "gir": 68.1,
+    "scr": 32.4,
+    "brd": 4.2,
+    "par3": 3.06,
+    "par5": 4.52
+  },
+  {
+    "id": 52,
+    "n": "Jake Knapp",
+    "c": "USA",
+    "dk": 12500,
+    "own": 3.1,
+    "form": [
+      68,
+      67,
+      24,
+      52,
+      31,
+      48,
+      58,
+      8,
+      62,
+      55
+    ],
+    "ch": {
+      "masters": [
+        55
+      ],
+      "players": [
+        45,
+        12
+      ],
+      "us_open": [],
+      "open": [],
+      "pga": [],
+      "memorial": [],
+      "arnold_palmer": [
+        57
+      ],
+      "genesis": [
+        22,
+        17,
+        6
+      ]
+    },
+    "sg": {
+      "tot": 1.58,
+      "ott": 0.13,
+      "app": -0.03,
+      "atg": -0.06,
+      "put": 0.2
+    },
+    "dr": {
+      "dist": 319,
+      "acc": 57.5
+    },
+    "gir": 66.5,
+    "scr": 52.2,
+    "brd": 4.2,
+    "par3": 3.02,
+    "par5": 4.45
+  },
+  {
+    "id": 53,
+    "n": "Jon Rahm",
+    "c": "ESP",
+    "dk": 8200,
+    "own": 13.7,
+    "form": [
+      6,
+      7,
+      2,
+      1,
+      2,
+      5,
+      1,
+      7,
+      10,
+      3
+    ],
+    "ch": {
+      "masters": [
+        6,
+        45,
+        14
+      ],
+      "players": [],
+      "us_open": [
+        7
+      ],
+      "open": [],
+      "pga": [
+        13,
+        8
+      ],
+      "memorial": [],
+      "arnold_palmer": [],
+      "genesis": []
+    },
+    "sg": {
+      "tot": 0.4,
+      "ott": 0.05,
+      "app": 0.06,
+      "atg": 0.06,
+      "put": 0.1
+    },
+    "dr": {
+      "dist": 305,
+      "acc": 60.0
+    },
+    "gir": 68.0,
+    "scr": 58.0,
+    "brd": 4.0,
+    "par3": 3.04,
+    "par5": 4.49,
+    "liv": true,
+    "majors_only": "Masters, U.S. Open, Open, PGA Champ winner"
+  },
+  {
+    "id": 54,
+    "n": "Bryson DeChambeau",
+    "c": "USA",
+    "dk": 8200,
+    "own": 13.7,
+    "form": [
+      40,
+      6,
+      15,
+      11,
+      9,
+      3,
+      1,
+      18,
+      2,
+      27
+    ],
+    "ch": {
+      "masters": [
+        6,
+        5
+      ],
+      "players": [],
+      "us_open": [
+        1
+      ],
+      "open": [],
+      "pga": [
+        2,
+        2
+      ],
+      "memorial": [],
+      "arnold_palmer": [],
+      "genesis": []
+    },
+    "sg": {
+      "tot": 0.4,
+      "ott": 0.05,
+      "app": 0.06,
+      "atg": 0.06,
+      "put": 0.1
+    },
+    "dr": {
+      "dist": 305,
+      "acc": 60.0
+    },
+    "gir": 68.0,
+    "scr": 58.0,
+    "brd": 4.0,
+    "par3": 3.04,
+    "par5": 4.49,
+    "liv": true,
+    "majors_only": "U.S. Open winner"
+  },
+  {
+    "id": 55,
+    "n": "Tyrrell Hatton",
+    "c": "ENG",
+    "dk": 8200,
+    "own": 13.7,
+    "form": [
+      1,
+      10,
+      5,
+      4,
+      18,
+      25,
+      2,
+      3,
+      1,
+      26
+    ],
+    "ch": {
+      "masters": [
+        18,
+        9,
+        14
+      ],
+      "players": [],
+      "us_open": [
+        26,
+        4
+      ],
+      "open": [],
+      "pga": [
+        63,
+        5,
+        60
+      ],
+      "memorial": [],
+      "arnold_palmer": [],
+      "genesis": []
+    },
+    "sg": {
+      "tot": 0.4,
+      "ott": 0.05,
+      "app": 0.06,
+      "atg": 0.06,
+      "put": 0.1
+    },
+    "dr": {
+      "dist": 305,
+      "acc": 60.0
+    },
+    "gir": 68.0,
+    "scr": 58.0,
+    "brd": 4.0,
+    "par3": 3.04,
+    "par5": 4.49,
+    "liv": true,
+    "majors_only": "OWGR top 50"
+  },
+  {
+    "id": 56,
+    "n": "Patrick Reed",
+    "c": "USA",
+    "dk": 8200,
+    "own": 13.7,
+    "form": [
+      35,
+      10,
+      10,
+      30,
+      15,
+      27,
+      4,
+      13,
+      29,
+      32
+    ],
+    "ch": {
+      "masters": [
+        12,
+        3,
+        1
+      ],
+      "players": [],
+      "us_open": [
+        23
+      ],
+      "open": [
+        29
+      ],
+      "pga": [
+        53,
+        3
+      ],
+      "memorial": [],
+      "arnold_palmer": [],
+      "genesis": []
+    },
+    "sg": {
+      "tot": 0.4,
+      "ott": 0.05,
+      "app": 0.06,
+      "atg": 0.06,
+      "put": 0.1
+    },
+    "dr": {
+      "dist": 305,
+      "acc": 60.0
+    },
+    "gir": 68.0,
+    "scr": 58.0,
+    "brd": 4.0,
+    "par3": 3.04,
+    "par5": 4.49,
+    "liv": true,
+    "majors_only": "Masters winner"
+  },
+  {
+    "id": 57,
+    "n": "Brooks Koepka",
+    "c": "USA",
+    "dk": 7900,
+    "own": 13.2,
+    "form": [
+      10,
+      52,
+      6,
+      1,
+      16,
+      43,
+      27,
+      42,
+      26,
+      9
+    ],
+    "ch": {
+      "masters": [
+        45
+      ],
+      "players": [
+        13
+      ],
+      "us_open": [
+        26,
+        12
+      ],
+      "open": [],
+      "pga": [
+        26
+      ],
+      "memorial": [],
+      "arnold_palmer": [],
+      "genesis": []
+    },
+    "sg": {
+      "tot": 0.24,
+      "ott": -0.05,
+      "app": 0.13,
+      "atg": -0.41,
+      "put": -0.02
+    },
+    "dr": {
+      "dist": 310,
+      "acc": 50.7
+    },
+    "gir": 69.2,
+    "scr": 34.3,
+    "brd": 4.2,
+    "par3": 3.05,
+    "par5": 4.49,
+    "liv": true,
+    "majors_only": "4x Major winner"
+  },
+  {
+    "id": 58,
+    "n": "Dustin Johnson",
+    "c": "USA",
+    "dk": 8200,
+    "own": 13.7,
+    "form": [
+      10,
+      34,
+      33,
+      20,
+      31,
+      17,
+      51,
+      13,
+      43,
+      7
+    ],
+    "ch": {
+      "masters": [],
+      "players": [],
+      "us_open": [],
+      "open": [],
+      "pga": [
+        43
+      ],
+      "memorial": [],
+      "arnold_palmer": [],
+      "genesis": []
+    },
+    "sg": {
+      "tot": 0.4,
+      "ott": 0.05,
+      "app": 0.06,
+      "atg": 0.06,
+      "put": 0.1
+    },
+    "dr": {
+      "dist": 305,
+      "acc": 60.0
+    },
+    "gir": 68.0,
+    "scr": 58.0,
+    "brd": 4.0,
+    "par3": 3.04,
+    "par5": 4.49,
+    "liv": true,
+    "majors_only": "2x Major winner"
+  },
+  {
+    "id": 59,
+    "n": "Cameron Smith",
+    "c": "AUS",
+    "dk": 8200,
+    "own": 13.7,
+    "form": [
+      5,
+      52,
+      8,
+      2,
+      6,
+      9,
+      32,
+      48,
+      63,
+      2
+    ],
+    "ch": {
+      "masters": [
+        6
+      ],
+      "players": [],
+      "us_open": [
+        32
+      ],
+      "open": [],
+      "pga": [
+        63,
+        2
+      ],
+      "memorial": [],
+      "arnold_palmer": [],
+      "genesis": []
+    },
+    "sg": {
+      "tot": 0.4,
+      "ott": 0.05,
+      "app": 0.06,
+      "atg": 0.06,
+      "put": 0.1
+    },
+    "dr": {
+      "dist": 305,
+      "acc": 60.0
+    },
+    "gir": 68.0,
+    "scr": 58.0,
+    "brd": 4.0,
+    "par3": 3.04,
+    "par5": 4.49,
+    "liv": true,
+    "majors_only": "Open Championship winner"
+  },
+  {
+    "id": 60,
+    "n": "Phil Mickelson",
+    "c": "USA",
+    "dk": 8200,
+    "own": 13.7,
+    "form": [
+      48,
+      23,
+      50,
+      34,
+      60,
+      27,
+      40,
+      37,
+      22,
+      38
+    ],
+    "ch": {
+      "masters": [
+        43
+      ],
+      "players": [],
+      "us_open": [],
+      "open": [],
+      "pga": [],
+      "memorial": [],
+      "arnold_palmer": [],
+      "genesis": []
+    },
+    "sg": {
+      "tot": 0.4,
+      "ott": 0.05,
+      "app": 0.06,
+      "atg": 0.06,
+      "put": 0.1
+    },
+    "dr": {
+      "dist": 305,
+      "acc": 60.0
+    },
+    "gir": 68.0,
+    "scr": 58.0,
+    "brd": 4.0,
+    "par3": 3.04,
+    "par5": 4.49,
+    "liv": true,
+    "majors_only": "6x Major winner, PGA Champ winner"
   }
 ];
 
