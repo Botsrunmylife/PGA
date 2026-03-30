@@ -143,24 +143,24 @@ def api_get(url, retries=2):
 
 
 def get_season_stats(player_id):
-    """Fetch season-level stats for a player. Tries current and previous season."""
+    """Fetch season-level stats for a player. Tries current, then previous seasons as fallback."""
     data = None
-    for season in [2026, 2025]:
+    for season in [2026, 2025, 2024]:
         url = f"https://sports.core.api.espn.com/v2/sports/golf/leagues/pga/seasons/{season}/types/1/athletes/{player_id}/statistics/0"
         data = api_get(url)
         if data and "splits" in data:
-            # Check if there's meaningful data (tournaments played > 0)
+            # Extract stats to check quality
+            tmp_stats = {}
             for cat in data["splits"]["categories"]:
                 for s in cat["stats"]:
-                    if s["name"] == "tournamentsPlayed" and s.get("value", 0) > 0:
-                        break
-                else:
-                    continue
+                    if "value" in s:
+                        tmp_stats[s["name"]] = s["value"]
+            # Must have tournaments played AND non-zero key stats (driving, GIR)
+            has_events = tmp_stats.get("tournamentsPlayed", 0) > 0
+            has_real_stats = tmp_stats.get("yardsPerDrive", 0) > 100 and tmp_stats.get("greensInRegPct", 0) > 10
+            if has_events and has_real_stats:
                 break
-            else:
-                data = None
-                continue
-            break
+            data = None
         time.sleep(REQUEST_DELAY)
     if not data or "splits" not in data:
         return {}
