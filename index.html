@@ -474,7 +474,7 @@ function renderTable() {
           const cls = v > 3 ? 'lev-pos' : v < -3 ? 'lev-neg' : 'lev-neut';
           return `<td class="lev ${cls}">${v > 0 ? '+' : ''}${v.toFixed(1)}%</td>`;
         }
-        case '_spark': return `<td>${renderSpark(p.form)}</td>`;
+        case '_spark': { const avg = (p.form.reduce((a,b)=>a+b,0)/p.form.length).toFixed(1); const avgClr = avg <= 10 ? 'var(--green)' : avg <= 20 ? 'var(--blue)' : 'var(--red)'; return `<td>${renderSpark(p.form)} <span style="font-size:11px;font-weight:700;color:${avgClr};margin-left:6px" data-tip="Average finish position over last 10 events">avg ${avg}</span></td>`; }
         case '_chDetail': {
           const hist = p.ch[curEv] || [];
           return `<td style="font-size:11px;color:var(--t2)">${hist.length ? hist.map(f => `<span style="color:${f<=3?'var(--green)':f<=10?'var(--blue)':f<=20?'var(--t2)':'var(--red)'};margin-right:4px;font-weight:600">T${f}</span>`).join('') : '<span style="color:var(--t3)">No history</span>'}</td>`;
