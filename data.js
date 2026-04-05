@@ -14,7 +14,7 @@ const PLAYERS = [
     "id": 1,
     "n": "Scottie Scheffler",
     "c": "USA",
-    "dk": 12500,
+    "dk": 14000,
     "own": 35,
     "form": [
       1,
@@ -84,7 +84,7 @@ const PLAYERS = [
     "id": 2,
     "n": "Xander Schauffele",
     "c": "USA",
-    "dk": 12300,
+    "dk": 9600,
     "own": 35,
     "form": [
       41,
@@ -154,7 +154,7 @@ const PLAYERS = [
     "id": 3,
     "n": "Rory McIlroy",
     "c": "NIR",
-    "dk": 12200,
+    "dk": 11600,
     "own": 35,
     "form": [
       3,
@@ -225,7 +225,7 @@ const PLAYERS = [
     "id": 4,
     "n": "Collin Morikawa",
     "c": "USA",
-    "dk": 12500,
+    "dk": 9500,
     "own": 35,
     "form": [
       54,
@@ -293,7 +293,7 @@ const PLAYERS = [
     "id": 5,
     "n": "Ludvig \u00c5berg",
     "c": "SWE",
-    "dk": 10500,
+    "dk": 9800,
     "own": 35,
     "form": [
       6,
@@ -361,7 +361,7 @@ const PLAYERS = [
     "id": 6,
     "n": "Wyndham Clark",
     "c": "USA",
-    "dk": 8500,
+    "dk": 7100,
     "own": 32.9,
     "form": [
       17,
@@ -425,7 +425,7 @@ const PLAYERS = [
     "id": 7,
     "n": "Viktor Hovland",
     "c": "NOR",
-    "dk": 9900,
+    "dk": 8800,
     "own": 35,
     "form": [
       12,
@@ -492,7 +492,7 @@ const PLAYERS = [
     "id": 8,
     "n": "Patrick Cantlay",
     "c": "USA",
-    "dk": 10200,
+    "dk": 7900,
     "own": 35,
     "form": [
       11,
@@ -557,7 +557,7 @@ const PLAYERS = [
     "id": 9,
     "n": "Tommy Fleetwood",
     "c": "ENG",
-    "dk": 11200,
+    "dk": 9300,
     "own": 35,
     "form": [
       3,
@@ -627,7 +627,7 @@ const PLAYERS = [
     "id": 10,
     "n": "Hideki Matsuyama",
     "c": "JPN",
-    "dk": 11700,
+    "dk": 8900,
     "own": 35,
     "form": [
       46,
@@ -761,7 +761,7 @@ const PLAYERS = [
     "id": 12,
     "n": "Shane Lowry",
     "c": "IRL",
-    "dk": 11300,
+    "dk": 8200,
     "own": 35,
     "form": [
       12,
@@ -891,7 +891,7 @@ const PLAYERS = [
     "id": 14,
     "n": "Max Homa",
     "c": "USA",
-    "dk": 8500,
+    "dk": 7300,
     "own": 26.1,
     "form": [
       27,
@@ -954,7 +954,7 @@ const PLAYERS = [
     "id": 15,
     "n": "Russell Henley",
     "c": "USA",
-    "dk": 11400,
+    "dk": 7900,
     "own": 33.9,
     "form": [
       19,
@@ -1019,7 +1019,7 @@ const PLAYERS = [
     "id": 16,
     "n": "Sungjae Im",
     "c": "KOR",
-    "dk": 10200,
+    "dk": 7500,
     "own": 29.3,
     "form": [
       7,
@@ -1080,7 +1080,7 @@ const PLAYERS = [
     "id": 17,
     "n": "Justin Thomas",
     "c": "USA",
-    "dk": 12500,
+    "dk": 8300,
     "own": 34.7,
     "form": [
       3,
@@ -1142,7 +1142,7 @@ const PLAYERS = [
     "id": 18,
     "n": "Sam Burns",
     "c": "USA",
-    "dk": 9700,
+    "dk": 7400,
     "own": 25.9,
     "form": [
       14,
@@ -1273,7 +1273,7 @@ const PLAYERS = [
     "id": 20,
     "n": "Keegan Bradley",
     "c": "USA",
-    "dk": 7600,
+    "dk": 7000,
     "own": 18.8,
     "form": [
       5,
@@ -1337,7 +1337,7 @@ const PLAYERS = [
     "id": 21,
     "n": "Corey Conners",
     "c": "CAN",
-    "dk": 8800,
+    "dk": 7700,
     "own": 20.9,
     "form": [
       7,
@@ -1407,7 +1407,7 @@ const PLAYERS = [
     "id": 22,
     "n": "Brian Harman",
     "c": "USA",
-    "dk": 6700,
+    "dk": 6500,
     "own": 15.2,
     "form": [
       25,
@@ -1475,7 +1475,7 @@ const PLAYERS = [
     "id": 23,
     "n": "Akshay Bhatia",
     "c": "USA",
-    "dk": 11700,
+    "dk": 7800,
     "own": 25.4,
     "form": [
       45,
@@ -1536,7 +1536,7 @@ const PLAYERS = [
     "id": 24,
     "n": "Min Woo Lee",
     "c": "AUS",
-    "dk": 12000,
+    "dk": 7700,
     "own": 24.9,
     "form": [
       24,
@@ -1605,7 +1605,7 @@ const PLAYERS = [
     "id": 25,
     "n": "Cameron Young",
     "c": "USA",
-    "dk": 12000,
+    "dk": 9200,
     "own": 23.7,
     "form": [
       13,
@@ -1671,7 +1671,7 @@ const PLAYERS = [
     "id": 26,
     "n": "Matt Fitzpatrick",
     "c": "ENG",
-    "dk": 12000,
+    "dk": 8700,
     "own": 22.5,
     "form": [
       35,
@@ -1740,7 +1740,7 @@ const PLAYERS = [
     "id": 27,
     "n": "Sepp Straka",
     "c": "AUT",
-    "dk": 8800,
+    "dk": 8000,
     "own": 15.6,
     "form": [
       29,
@@ -1927,7 +1927,7 @@ const PLAYERS = [
     "id": 30,
     "n": "Robert MacIntyre",
     "c": "SCO",
-    "dk": 10400,
+    "dk": 8600,
     "own": 15.3,
     "form": [
       7,
@@ -1990,7 +1990,7 @@ const PLAYERS = [
     "id": 31,
     "n": "Aaron Rai",
     "c": "ENG",
-    "dk": 7400,
+    "dk": 6800,
     "own": 10.2,
     "form": [
       42,
@@ -2234,7 +2234,7 @@ const PLAYERS = [
     "id": 35,
     "n": "Adam Scott",
     "c": "AUS",
-    "dk": 10100,
+    "dk": 7200,
     "own": 9.8,
     "form": [
       46,
@@ -2305,7 +2305,7 @@ const PLAYERS = [
     "id": 36,
     "n": "Jason Day",
     "c": "AUS",
-    "dk": 8900,
+    "dk": 7600,
     "own": 7.8,
     "form": [
       19,
@@ -2369,7 +2369,7 @@ const PLAYERS = [
     "id": 37,
     "n": "Maverick McNealy",
     "c": "USA",
-    "dk": 9600,
+    "dk": 7200,
     "own": 7.4,
     "form": [
       6,
@@ -2549,7 +2549,7 @@ const PLAYERS = [
     "id": 40,
     "n": "Justin Rose",
     "c": "ENG",
-    "dk": 8900,
+    "dk": 9100,
     "own": 4.2,
     "form": [
       34,
@@ -2608,7 +2608,7 @@ const PLAYERS = [
     "id": 41,
     "n": "Chris Gotterup",
     "c": "USA",
-    "dk": 12300,
+    "dk": 8000,
     "own": 4.6,
     "form": [
       71,
@@ -2661,7 +2661,7 @@ const PLAYERS = [
     "id": 42,
     "n": "J.J. Spaun",
     "c": "USA",
-    "dk": 6400,
+    "dk": 7200,
     "own": 2,
     "form": [
       6,
@@ -2720,7 +2720,7 @@ const PLAYERS = [
     "id": 43,
     "n": "Ben Griffin",
     "c": "USA",
-    "dk": 8400,
+    "dk": 7600,
     "own": 2.1,
     "form": [
       39,
@@ -2778,7 +2778,7 @@ const PLAYERS = [
     "id": 44,
     "n": "Jacob Bridgeman",
     "c": "USA",
-    "dk": 12500,
+    "dk": 7400,
     "own": 3.1,
     "form": [
       14,
@@ -2834,7 +2834,7 @@ const PLAYERS = [
     "id": 45,
     "n": "Alex Noren",
     "c": "SWE",
-    "dk": 7400,
+    "dk": 7000,
     "own": 2,
     "form": [
       12,
@@ -2897,7 +2897,7 @@ const PLAYERS = [
     "id": 46,
     "n": "Harris English",
     "c": "USA",
-    "dk": 8600,
+    "dk": 7300,
     "own": 2.1,
     "form": [
       14,
@@ -2965,7 +2965,7 @@ const PLAYERS = [
     "id": 47,
     "n": "Ryan Gerard",
     "c": "USA",
-    "dk": 9900,
+    "dk": 6800,
     "own": 2.5,
     "form": [
       23,
@@ -3023,7 +3023,7 @@ const PLAYERS = [
     "id": 48,
     "n": "Si Woo Kim",
     "c": "KOR",
-    "dk": 10300,
+    "dk": 7800,
     "own": 2.6,
     "form": [
       18,
@@ -3093,7 +3093,7 @@ const PLAYERS = [
     "id": 49,
     "n": "Kurt Kitayama",
     "c": "USA",
-    "dk": 8900,
+    "dk": 6800,
     "own": 2.2,
     "form": [
       5,
@@ -3213,7 +3213,7 @@ const PLAYERS = [
     "id": 51,
     "n": "Nico Echavarria",
     "c": "COL",
-    "dk": 7800,
+    "dk": 6700,
     "own": 2,
     "form": [
       11,
@@ -3327,7 +3327,7 @@ const PLAYERS = [
     "id": 53,
     "n": "Jon Rahm",
     "c": "ESP",
-    "dk": 8200,
+    "dk": 10000,
     "own": 13.7,
     "form": [
       6,
@@ -3383,7 +3383,7 @@ const PLAYERS = [
     "id": 54,
     "n": "Bryson DeChambeau",
     "c": "USA",
-    "dk": 8200,
+    "dk": 10200,
     "own": 13.7,
     "form": [
       40,
@@ -3438,7 +3438,7 @@ const PLAYERS = [
     "id": 55,
     "n": "Tyrrell Hatton",
     "c": "ENG",
-    "dk": 8200,
+    "dk": 8100,
     "own": 13.7,
     "form": [
       1,
@@ -3496,7 +3496,7 @@ const PLAYERS = [
     "id": 56,
     "n": "Patrick Reed",
     "c": "USA",
-    "dk": 8200,
+    "dk": 9000,
     "own": 13.7,
     "form": [
       35,
@@ -3554,7 +3554,7 @@ const PLAYERS = [
     "id": 57,
     "n": "Brooks Koepka",
     "c": "USA",
-    "dk": 7900,
+    "dk": 8500,
     "own": 13.2,
     "form": [
       10,
@@ -3610,7 +3610,7 @@ const PLAYERS = [
     "id": 58,
     "n": "Dustin Johnson",
     "c": "USA",
-    "dk": 8200,
+    "dk": 7000,
     "own": 13.7,
     "form": [
       10,
@@ -3659,7 +3659,7 @@ const PLAYERS = [
     "id": 59,
     "n": "Cameron Smith",
     "c": "AUS",
-    "dk": 8200,
+    "dk": 7500,
     "own": 13.7,
     "form": [
       5,
@@ -3713,7 +3713,7 @@ const PLAYERS = [
     "id": 60,
     "n": "Phil Mickelson",
     "c": "USA",
-    "dk": 8200,
+    "dk": 6400,
     "own": 13.7,
     "form": [
       48,
