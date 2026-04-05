@@ -695,7 +695,7 @@ const PLAYERS = [
     "id": 11,
     "n": "Sahith Theegala",
     "c": "USA",
-    "dk": 11800,
+    "dk": 0,
     "own": 35,
     "form": [
       7,
@@ -826,7 +826,7 @@ const PLAYERS = [
     "id": 13,
     "n": "Tony Finau",
     "c": "USA",
-    "dk": 9200,
+    "dk": 0,
     "own": 29.2,
     "form": [
       23,
@@ -1207,7 +1207,7 @@ const PLAYERS = [
     "id": 19,
     "n": "Tom Kim",
     "c": "KOR",
-    "dk": 9400,
+    "dk": 0,
     "own": 24.2,
     "form": [
       50,
@@ -1805,7 +1805,7 @@ const PLAYERS = [
     "id": 28,
     "n": "Denny McCarthy",
     "c": "USA",
-    "dk": 8100,
+    "dk": 0,
     "own": 13.6,
     "form": [
       25,
@@ -1871,7 +1871,7 @@ const PLAYERS = [
     "id": 29,
     "n": "Billy Horschel",
     "c": "USA",
-    "dk": 6800,
+    "dk": 0,
     "own": 10.7,
     "form": [
       1,
@@ -2055,7 +2055,7 @@ const PLAYERS = [
     "id": 32,
     "n": "Chris Kirk",
     "c": "USA",
-    "dk": 6900,
+    "dk": 0,
     "own": 8.8,
     "form": [
       35,
@@ -2115,7 +2115,7 @@ const PLAYERS = [
     "id": 33,
     "n": "Taylor Pendrith",
     "c": "CAN",
-    "dk": 7300,
+    "dk": 0,
     "own": 8.6,
     "form": [
       8,
@@ -2177,7 +2177,7 @@ const PLAYERS = [
     "id": 34,
     "n": "Davis Thompson",
     "c": "USA",
-    "dk": 8000,
+    "dk": 0,
     "own": 8.6,
     "form": [
       5,
@@ -2431,7 +2431,7 @@ const PLAYERS = [
     "id": 38,
     "n": "Will Zalatoris",
     "c": "USA",
-    "dk": 9100,
+    "dk": 0,
     "own": 6.1,
     "form": [
       41,
@@ -2490,7 +2490,7 @@ const PLAYERS = [
     "id": 39,
     "n": "Austin Eckroat",
     "c": "USA",
-    "dk": 7600,
+    "dk": 0,
     "own": 4.4,
     "form": [
       1,
@@ -3151,7 +3151,7 @@ const PLAYERS = [
     "id": 50,
     "n": "Nicolai H\u00f8jgaard",
     "c": "DEN",
-    "dk": 11200,
+    "dk": 0,
     "own": 2.8,
     "form": [
       65,
@@ -3271,7 +3271,7 @@ const PLAYERS = [
     "id": 52,
     "n": "Jake Knapp",
     "c": "USA",
-    "dk": 12500,
+    "dk": 0,
     "own": 3.1,
     "form": [
       68,

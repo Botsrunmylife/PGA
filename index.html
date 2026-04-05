@@ -458,7 +458,7 @@ function renderTable() {
           const v = getVal(p, c.k);
           return `<td class="${v >= 0 ? 'sg-p' : 'sg-n'}">${v >= 0 ? '+' : ''}${v.toFixed(2)}</td>`;
         }
-        case 'dk': return `<td>$${p.dk.toLocaleString()}</td>`;
+        case 'dk': return `<td>${p.dk > 0 ? '$' + p.dk.toLocaleString() : '<span style="color:var(--t3)">N/A</span>'}</td>`;
         case 'own': return `<td style="color:var(--t2)">${p.own}%</td>`;
         case 'gir': return `<td>${p.gir}%</td>`;
         case 'brd': return `<td>${p.brd}</td>`;
@@ -629,7 +629,7 @@ function setTier(el, t) { document.querySelectorAll('#tierBtns .fbtn').forEach(x
 function doSort(k) { if (sortK === k) sortD *= -1; else { sortK = k; sortD = -1; } renderTable(); }
 function setW(k, v) { W[k] = parseInt(v); document.getElementById('wv_'+k).textContent = v+'%'; render(); }
 function resetWeights() { W = {sgTot:20,sgSplit:18,form:18,courseHist:15,courseFit:12,ballstriking:8,shortGame:9}; render(); }
-function togLU(pid) { const i = lineup.indexOf(pid); if (i >= 0) lineup.splice(i, 1); else if (lineup.length < MAXLU) lineup.push(pid); renderTable(); renderLineup(); }
+function togLU(pid) { const i = lineup.indexOf(pid); if (i >= 0) lineup.splice(i, 1); else if (lineup.length < MAXLU) { const p = PLAYERS.find(x => x.id === pid); if (p && p.dk > 0) lineup.push(pid); } renderTable(); renderLineup(); }
 function rmLU(pid) { lineup = lineup.filter(id => id !== pid); renderTable(); renderLineup(); }
 function clearLineup() { lineup = []; renderTable(); renderLineup(); }
 function autoLineup() {
@@ -639,7 +639,7 @@ function autoLineup() {
   let remSal = SALCAP;
   for (const p of ps) {
     if (lineup.length >= MAXLU) break;
-    if (p.dk <= remSal) { lineup.push(p.id); remSal -= p.dk; }
+    if (p.dk > 0 && p.dk <= remSal) { lineup.push(p.id); remSal -= p.dk; }
   }
   renderTable(); renderLineup();
 }
