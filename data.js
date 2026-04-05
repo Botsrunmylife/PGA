@@ -1,5 +1,5 @@
 // PGA Fantasy Model — Auto-generated from ESPN data
-// Generated: 2026-03-30 16:32
+// Generated: 2026-04-05 09:34
 // Players: 60
 //
 // Strokes gained values are ESTIMATED from available ESPN stats.
